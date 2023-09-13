@@ -5,7 +5,6 @@
 /.pnp
 .pnp.js
 src/patch-original
-src/patch-500
 
 # testing
 /coverage

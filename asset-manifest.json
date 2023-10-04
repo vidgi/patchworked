@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/patchworked/static/css/main.47876b0a.css",
-    "main.js": "/patchworked/static/js/main.d7e238a9.js",
+    "main.js": "/patchworked/static/js/main.be8a810d.js",
     "static/js/496.ab38a58d.chunk.js": "/patchworked/static/js/496.ab38a58d.chunk.js",
     "static/media/handjet.ttf": "/patchworked/static/media/handjet.48984a8b123eda64c076.ttf",
     "static/media/patch-517.jpg": "/patchworked/static/media/patch-517.a008240fa7cca7e0d298.jpg",
     "static/media/patch-494.jpg": "/patchworked/static/media/patch-494.b91290f62906700b82db.jpg",
-    "static/media/waternormals.jpg": "/patchworked/static/media/waternormals.537ec85b965d414829ab.jpg",
     "static/media/patch-451.jpg": "/patchworked/static/media/patch-451.f47bba90a37556c2d38e.jpg",
     "static/media/patch-471.jpg": "/patchworked/static/media/patch-471.99606510f5227768e6c5.jpg",
     "static/media/patch-400.jpg": "/patchworked/static/media/patch-400.c51a492954195b28ca6e.jpg",
@@ -527,11 +526,11 @@
     "static/media/blade_alpha.jpg": "/patchworked/static/media/blade_alpha.fd72bbc9635d5a296576.jpg",
     "index.html": "/patchworked/index.html",
     "main.47876b0a.css.map": "/patchworked/static/css/main.47876b0a.css.map",
-    "main.d7e238a9.js.map": "/patchworked/static/js/main.d7e238a9.js.map",
+    "main.be8a810d.js.map": "/patchworked/static/js/main.be8a810d.js.map",
     "496.ab38a58d.chunk.js.map": "/patchworked/static/js/496.ab38a58d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.47876b0a.css",
-    "static/js/main.d7e238a9.js"
+    "static/js/main.be8a810d.js"
   ]
 }

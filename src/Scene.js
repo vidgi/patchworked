@@ -9,7 +9,7 @@ import { DepthOfField } from "@react-three/postprocessing";
 
 export function Scene(props) {
   return (
-    <Canvas camera={{ fov: 12, position: [-100, 150, 0] }}>
+    <Canvas camera={{ fov: 12, position: [-100, 10, 0] }}>
       <Suspense maxDuration={5000} fallback={null}>
         <pointLight position={[10, 10, 10]} />
         <pointLight position={[-10, 10, 10]} />

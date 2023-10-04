@@ -13,9 +13,9 @@ export function Scene(props) {
       <Suspense maxDuration={5000} fallback={null}>
         <pointLight position={[10, 10, 10]} />
         <pointLight position={[-10, 10, 10]} />
-        <pointLight position={[-10, 10, -10]} />
+        {/* <pointLight position={[-10, 10, -10]} />
         <pointLight position={[-10, -10, -10]} />
-        <pointLight position={[10, -10, 10]} />
+        <pointLight position={[10, -10, 10]} /> */}
 
         <Sky sunPosition={[100, 20, 100]} inclination={0} azimuth={0.25} />
 
@@ -40,7 +40,7 @@ export function Scene(props) {
           minDistance={100}
           maxDistance={140}
           maxAzimuthAngle={Math.PI / 10}
-          maxPolarAngle={Math.PI / 2.5}
+          maxPolarAngle={Math.PI / 2.15}
           minAzimuthAngle={-Math.PI / 2}
           minPolarAngle={Math.PI / 3.2}
         />

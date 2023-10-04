@@ -3,7 +3,9 @@ import { Loader } from "@react-three/drei";
 import "./App.css";
 import { Scene } from "./Scene";
 import VidyaIcon from "@mui/icons-material/AutoAwesome";
-// import CameraIcon from "@mui/icons-material/PhotoCamera";
+import PatternIcon from "@mui/icons-material/Texture";
+import GrassIcon from "@mui/icons-material/Grass";
+
 import { CameraFiles } from "./CameraFiles";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -20,7 +22,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: `"Courier", "Arial", monospace`,
+    fontFamily: `"Courier","Arial", monospace`,
   },
   card: {
     backgroundColor: "#c5ccb6 !important",
@@ -28,7 +30,7 @@ const theme = createTheme({
 });
 
 const App = () => {
-  var photoData = shuffle(cameraFiles).slice(0, 200);
+  var photoData = shuffle(cameraFiles).slice(0, 1);
 
   // var photoData = CameraFiles;
   const [allPhotos] = useState(photoData);
@@ -49,8 +51,24 @@ const App = () => {
         <ThemeProvider theme={theme}>
           <div
             style={{
+              color: "white",
               position: "absolute",
-              bottom: "0em",
+              top: "0.5em",
+              left: "0em",
+              zIndex: "10000",
+            }}
+          >
+            <Tooltip title="prairie patterns: some simple patterns made from plants of the prairie">
+              <Button>
+                <GrassIcon />
+              </Button>
+            </Tooltip>
+          </div>
+
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0.5em",
               right: "0em",
               zIndex: "10000",
             }}
@@ -65,14 +83,14 @@ const App = () => {
           {/* <div
             style={{
               position: "absolute",
-              top: "0em",
-              right: "0em",
+              bottom: "0.5em",
+              left: "0em",
               zIndex: "10000",
             }}
           >
-            <Tooltip title="elaine's camera">
-              <Button onClick={revealPhoto}>
-                <CameraIcon />
+            <Tooltip title="new prairie pattern">
+              <Button onClick={null}>
+                <PatternIcon />
               </Button>
             </Tooltip>
           </div> */}

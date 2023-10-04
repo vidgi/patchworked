@@ -48,7 +48,7 @@ export function Scene(props) {
         /> */}
         <Sky sunPosition={[100, 20, 100]} inclination={0} azimuth={0.25} />
 
-        <group transform scale={[2, 2, 2]} position={[0, -12, -3.5]}>
+        <group transform scale={[2, 2, 2]} position={[0, -12, -20]}>
           <Grass />
           {/* <Ocean /> */}
         </group>
@@ -56,7 +56,7 @@ export function Scene(props) {
         <Wave file={[require("./posters/elaine2.jpg")]} position={[0.65, 0, 0]} planeGeometryArgs={[0.5, 0.5 * (8 / 5), 16, 16]} />
         <Wave file={[require("./posters/elaine3.jpg")]} position={[-0.65, 0, 0]} planeGeometryArgs={[0.6, 0.6 * (8 / 5), 16, 16]} /> */}
 
-        <group transform rotation={[0, -Math.PI / 3, 0]} scale={[10, 10, 10]}>
+        <group transform position={[0, 3, 0]} rotation={[0, -Math.PI / 3, 0]} scale={[20, 20, 20]}>
           {props.allPhotos.map((item, index) => (
             <Wave
               key={index}
@@ -103,11 +103,11 @@ export function Scene(props) {
         <OrbitControls
           enablePan={false}
           minDistance={100}
-          maxDistance={150}
+          maxDistance={140}
           maxAzimuthAngle={Math.PI / 10}
           maxPolarAngle={Math.PI / 2.1}
-          minAzimuthAngle={-Math.PI / 1.3}
-          minPolarAngle={Math.PI / 2.5}
+          minAzimuthAngle={-Math.PI / 2}
+          minPolarAngle={Math.PI / 2.9}
         />
       </Suspense>
     </Canvas>

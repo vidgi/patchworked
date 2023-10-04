@@ -49,7 +49,7 @@ const App = () => {
     <>
       <div className="App" style={{ height: "100vh", width: "100vw" }}>
         <ThemeProvider theme={theme}>
-          <div
+          {/* <div
             style={{
               color: "white",
               position: "absolute",
@@ -63,7 +63,7 @@ const App = () => {
                 <GrassIcon />
               </Button>
             </Tooltip>
-          </div>
+          </div> */}
 
           <div
             style={{

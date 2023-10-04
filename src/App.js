@@ -30,21 +30,17 @@ const theme = createTheme({
 });
 
 const App = () => {
-  var photoData = shuffle(cameraFiles).slice(0, 1);
+  var photoData = shuffle(cameraFiles);
 
-  // var photoData = CameraFiles;
+  // var photoData = shuffle(cameraFiles).slice(0, 100);
+
   const [allPhotos] = useState(photoData);
-  // const [visiblePhotos, setVisiblePhotos] = useState([]);
-  // function revealPhoto() {
-  //   var currentVisible = visiblePhotos;
-  //   var currentAll = allPhotos;
-  //   if (allPhotos.length > 0) {
-  //     var toAdd = currentAll.pop();
-  //     setAllPhotos(currentAll);
-  //     setVisiblePhotos(currentVisible.concat([toAdd]));
-  //   }
-  // }
+  const [selectedPhoto, setSelectedPhoto] = useState(allPhotos[Math.floor(Math.random() * allPhotos.length)]);
 
+  const getRandomPhoto = () => {
+    console.log("click");
+    setSelectedPhoto(allPhotos[Math.floor(Math.random() * allPhotos.length)]);
+  };
   return (
     <>
       <div className="App" style={{ height: "100vh", width: "100vw" }}>
@@ -80,7 +76,7 @@ const App = () => {
             </Tooltip>
           </div>
 
-          {/* <div
+          <div
             style={{
               position: "absolute",
               bottom: "0.5em",
@@ -89,14 +85,16 @@ const App = () => {
             }}
           >
             <Tooltip title="new prairie pattern">
-              <Button onClick={null}>
+              <Button onClick={getRandomPhoto}>
                 <PatternIcon />
               </Button>
             </Tooltip>
-          </div> */}
+          </div>
 
           <Scene
             allPhotos={allPhotos}
+            selectedPhoto={selectedPhoto}
+            onClick={getRandomPhoto}
             // visiblePhotos={visiblePhotos}
           />
           <Loader />

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/patchworked/static/css/main.47876b0a.css",
-    "main.js": "/patchworked/static/js/main.2075f276.js",
+    "main.js": "/patchworked/static/js/main.eef7b91e.js",
     "static/js/496.ab38a58d.chunk.js": "/patchworked/static/js/496.ab38a58d.chunk.js",
     "static/media/handjet.ttf": "/patchworked/static/media/handjet.48984a8b123eda64c076.ttf",
     "static/media/patch-517.jpg": "/patchworked/static/media/patch-517.a008240fa7cca7e0d298.jpg",
@@ -526,11 +526,11 @@
     "static/media/blade_alpha.jpg": "/patchworked/static/media/blade_alpha.fd72bbc9635d5a296576.jpg",
     "index.html": "/patchworked/index.html",
     "main.47876b0a.css.map": "/patchworked/static/css/main.47876b0a.css.map",
-    "main.2075f276.js.map": "/patchworked/static/js/main.2075f276.js.map",
+    "main.eef7b91e.js.map": "/patchworked/static/js/main.eef7b91e.js.map",
     "496.ab38a58d.chunk.js.map": "/patchworked/static/js/496.ab38a58d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.47876b0a.css",
-    "static/js/main.2075f276.js"
+    "static/js/main.eef7b91e.js"
   ]
 }

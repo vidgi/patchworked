@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Html, OrbitControls, Sky } from "@react-three/drei";
+import { OrbitControls, Sky } from "@react-three/drei";
 import "./App.css";
 import { Wave } from "./Wave";
 import Grass from "./Grass";
@@ -13,9 +13,6 @@ export function Scene(props) {
       <Suspense maxDuration={5000} fallback={null}>
         <pointLight position={[10, 10, 10]} />
         <pointLight position={[-10, 10, 10]} />
-        {/* <pointLight position={[-10, 10, -10]} />
-        <pointLight position={[-10, -10, -10]} />
-        <pointLight position={[10, -10, 10]} /> */}
 
         <Sky sunPosition={[100, 20, 100]} inclination={0} azimuth={0.25} />
 

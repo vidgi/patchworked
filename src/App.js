@@ -4,7 +4,7 @@ import "./App.css";
 import { Scene } from "./Scene";
 import VidyaIcon from "@mui/icons-material/AutoAwesome";
 import PatternIcon from "@mui/icons-material/Texture";
-import GrassIcon from "@mui/icons-material/Grass";
+// import GrassIcon from "@mui/icons-material/Grass";
 
 import { CameraFiles } from "./CameraFiles";
 

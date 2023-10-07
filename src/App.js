@@ -5,6 +5,7 @@ import { Scene } from "./Scene";
 import VidyaIcon from "@mui/icons-material/AutoAwesome";
 import PatternIcon from "@mui/icons-material/Texture";
 // import GrassIcon from "@mui/icons-material/Grass";
+import { Environment, FaceLandmarker, FaceControls, Stats } from "@react-three/drei";
 
 import { CameraFiles } from "./CameraFiles";
 
@@ -91,12 +92,15 @@ const App = () => {
             </Tooltip>
           </div>
 
-          <Scene
-            allPhotos={allPhotos}
-            selectedPhoto={selectedPhoto}
-            onClick={getRandomPhoto}
-            // visiblePhotos={visiblePhotos}
-          />
+          <FaceLandmarker>
+            <Scene
+              allPhotos={allPhotos}
+              selectedPhoto={selectedPhoto}
+              onClick={getRandomPhoto}
+              // visiblePhotos={visiblePhotos}
+            />
+          </FaceLandmarker>
+
           <Loader />
         </ThemeProvider>
       </div>

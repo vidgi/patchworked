@@ -4,8 +4,9 @@ import { OrbitControls, Sky } from "@react-three/drei";
 import "./App.css";
 import { Wave } from "./Wave";
 import Grass from "./Grass";
-import { EffectComposer } from "@react-three/postprocessing";
+import { EffectComposer, Autofocus } from "@react-three/postprocessing";
 import { DepthOfField } from "@react-three/postprocessing";
+import { Environment, FaceLandmarker, FaceControls, Stats } from "@react-three/drei";
 
 export function Scene(props) {
   return (
@@ -16,23 +17,24 @@ export function Scene(props) {
 
         <Sky sunPosition={[100, 20, 100]} inclination={0} azimuth={0.25} />
 
-        <group transform scale={[2, 2, 2]} position={[0, -12, -20]}>
+        <group transform scale={[1, 1, 1]} position={[0, -12, -20]}>
           <Grass />
         </group>
 
-        <group transform position={[0, 4, 0]} rotation={[0, -Math.PI / 3, 0]} scale={[20, 20, 20]} onClick={props.onClick}>
+        {/* <group transform position={[0, 4, 0]} rotation={[0, -Math.PI / 3, 0]} scale={[20, 20, 20]} onClick={props.onClick}>
           <Wave file={props.selectedPhoto.file} planeGeometryArgs={[0.6, 0.6, 16, 16]} />
-        </group>
+        </group> */}
 
-        <EffectComposer>
+        {/* <EffectComposer>
           <DepthOfField
             focusDistance={0.12} // where to focus
             focalLength={0.14} // focal length
             bokehScale={10} // bokeh size
           />
-        </EffectComposer>
+          <Autofocus debug={0.02} focusRange={0.001} bokehScale={20} />
+        </EffectComposer> */}
 
-        <OrbitControls
+        {/* <OrbitControls
           enablePan={false}
           minDistance={100}
           maxDistance={140}
@@ -40,7 +42,8 @@ export function Scene(props) {
           maxPolarAngle={Math.PI / 2.15}
           minAzimuthAngle={-Math.PI / 2}
           minPolarAngle={Math.PI / 3.2}
-        />
+        /> */}
+        <FaceControls offsetScalar={10} />
       </Suspense>
     </Canvas>
   );

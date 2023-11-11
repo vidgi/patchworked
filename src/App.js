@@ -101,7 +101,7 @@ const App = () => {
           <Scene
             allPhotos={allPhotos}
             selectedPhoto={selectedPhoto}
-            onClick={getRandomPhoto}
+            // onClick={getRandomPhoto}
             // visiblePhotos={visiblePhotos}
           />
           <Loader />

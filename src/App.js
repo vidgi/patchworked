@@ -4,12 +4,12 @@ import "./App.css";
 import { Scene } from "./Scene";
 import VidyaIcon from "@mui/icons-material/AutoAwesome";
 import PatternIcon from "@mui/icons-material/Texture";
-// import GrassIcon from "@mui/icons-material/Grass";
+import WavesIcon from "@mui/icons-material/Waves";
 
 import { CameraFiles } from "./CameraFiles";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Button, Tooltip } from "@mui/material";
+import { Button, ToggleButton, Tooltip } from "@mui/material";
 
 const cameraFiles = CameraFiles();
 const theme = createTheme({
@@ -41,6 +41,14 @@ const App = () => {
     console.log("click");
     setSelectedPhoto(allPhotos[Math.floor(Math.random() * allPhotos.length)]);
   };
+
+  const [isSariMode, setSariMode] = useState(false);
+
+  const toggleMode = () => {
+    setSariMode(!isSariMode);
+    console.log(isSariMode);
+  };
+
   return (
     <>
       <div className="App" style={{ height: "100vh", width: "100vw" }}>
@@ -91,7 +99,30 @@ const App = () => {
             </Tooltip>
           </div>
 
+          <div
+            style={{
+              position: "absolute",
+              top: "0.5em",
+              right: "0.5em",
+              zIndex: "10000",
+            }}
+          >
+            <Tooltip title="toggle view">
+              <ToggleButton
+                // color={"primary"}
+                size={"small"}
+                value={isSariMode}
+                selected={isSariMode}
+                onClick={toggleMode}
+                aria-label="toggle pattern view"
+              >
+                <WavesIcon />
+              </ToggleButton>
+            </Tooltip>
+          </div>
+
           <Scene
+            isSariMode={isSariMode}
             allPhotos={allPhotos}
             selectedPhoto={selectedPhoto}
             onClick={getRandomPhoto}

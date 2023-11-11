@@ -13,7 +13,7 @@ export function Wave(props) {
   return (
     <mesh position={props.position}>
       <planeGeometry args={props.planeGeometryArgs} />
-      <waveShaderMaterial uColor={"hotpink"} ref={ref} uTexture={image} />
+      <waveShaderMaterial ref={ref} uTexture={image} />
     </mesh>
   );
 }

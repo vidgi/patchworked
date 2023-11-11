@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Loader } from "@react-three/drei";
 import "./App.css";
 import { Scene } from "./Scene";
@@ -41,6 +41,13 @@ const App = () => {
     console.log("click");
     setSelectedPhoto(allPhotos[Math.floor(Math.random() * allPhotos.length)]);
   };
+
+  useEffect(() => {
+    const interval = setInterval(getRandomPhoto, 1000); // 5000 ms = 5 seconds
+
+    return () => clearInterval(interval);
+  }, [getRandomPhoto]);
+
   return (
     <>
       <div className="App" style={{ height: "100vh", width: "100vw" }}>
@@ -76,7 +83,7 @@ const App = () => {
             </Tooltip>
           </div>
 
-          <div
+          {/* <div
             style={{
               position: "absolute",
               bottom: "0.5em",
@@ -89,7 +96,7 @@ const App = () => {
                 <PatternIcon />
               </Button>
             </Tooltip>
-          </div>
+          </div> */}
 
           <Scene
             allPhotos={allPhotos}
